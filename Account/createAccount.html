@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Agency Page Template</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../home.html">
+		  <img class="card-img-top" alt="" style="width: 90px;" src="../pictures/logo.png">
+	  </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> <a class="nav-link" href="../shop.html">SHOP</a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ALL </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="../shop.html">Shop all</a> <a class="dropdown-item" href="../../shoes.html">Shoes</a>
+				<a class="dropdown-item" href="../5sectionsProduct/monitors.html">Monitors</a> <a class="dropdown-item" href="../5sectionsProduct/bags.html">Bags</a>
+				<a class="dropdown-item" href="../5sectionsProduct/bottles.html">Bottles</a> <a class="dropdown-item" href="#">speakers</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="../../contact.html">contact us</a> 
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+		  <a href="signin.html" class="btn btn-outline-secondary my-2 my-sm-0" style = "color: gray;">Sign In</a>	
+          <a href="createAccount.html" class="btn btn-outline-primary my-2 my-sm-0" >Create An Account</a>
+        </form>
+      </div>
+    </nav>
+    <header>
+      <div class="jumbotron">
+		  
+        <div class="container">
+			
+          <div class="row">
+            <div class="col-12">
+				<script>
+        			function validate() 
+					{
+						var login = document.getElementById('login').value();
+						var password = document.getElementById('password').value();
+						var repassword = document.getElementById('repassword').value();
+						var email = document.getElementById('email').value();
+
+
+						if (login === '' || password === '' || repassword === ''|| email === '') 
+						{
+							alert("Please fill in all required fields: Login, Password, Re-enter Password, and Email");
+							return false;
+						}
+						
+						if (repassword !== password)
+						{
+							alert("Password does not match.");
+							return false; 
+						}
+
+
+						var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+						if (!emailRegex.test(email)) 
+						{
+							alert("Please enter a valid email address");
+							return false;
+						}
+
+
+						var street = document.getElementById('street').value();
+						var city = document.getElementById('city').value();
+						var state = document.getElementById('state').value();
+						var zip = document.getElementById('zip').value();
+						var phone = document.getElementById('phone').value();
+
+						return true; 
+        			}
+    			</script>
+				
+				
+
+					
+				
+					<div class="container">
+  						<h2 class="text-center">Create an account</h2>
+					</div>
+					
+					<div class="container mt-5">
+  						<div class="row justify-content-center">
+    						<div class="col-md-6 d-flex bg-white p-4 rounded justify-content-center">		
+					 			<form onsubmit="return validate()">
+									<label for="login">Login </label><label style="color: red">*</label><br>
+									<input type="text" id="login" name="login" class="form-control " required><br><br>
+
+									<label for="password">Password </label><label style="color: red">*</label><br>
+									<input type="password" id="password" name="password" class="form-control" required><br><br>
+
+									<label for="repassword">Re-enter Password </label><label style="color: red">*</label><br>
+									<input type="password" id="repassword" name="repassword" class="form-control" required><br><br>
+
+									<label for="email">Email </label><label style="color: red">*</label><br>
+									<input type="email" id="email" name="email" class="form-control" required><br><br>
+
+									<label for="street">Street</label><br>
+									<input type="text" id="street" name="street" class="form-control"><br><br>
+
+									<label for="city">City</label><br>
+									<input type="text" id="city" name="city" class="form-control"><br><br>
+
+									<label for="state">State</label><br>
+									<input type="text" id="state" name="state" class="form-control"><br><br>
+
+									<label for="zip">Zip</label><br>
+									<input type="text" id="zip" name="zip" class="form-control"><br><br>
+
+									<label for="phone">Phone</label><br>
+									<input type="text" id="phone" name="phone" class="form-control"><br><br>
+									
+									<div class="row justify-content-center">
+										<input type="submit" value="Create Account" class="rounded" >
+									</div>
+									
+									
+								</form>
+							</div>
+						</div>
+					</div>
+			
+			</div>
+          </div>
+        </div>
+      </div>
+    </header>
+	</body>
+</html>
